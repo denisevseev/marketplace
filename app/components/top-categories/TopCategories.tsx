@@ -46,6 +46,8 @@ const TopCategories: React.FC<TopCategoritesProps> = ({ data }) => {
     setPopupVisible(false);
   };
 
+
+  console.log(data);
   return (
     <Box className="topCategoriesMainBox">
       <Box className="topCategoriesBox">
@@ -53,114 +55,23 @@ const TopCategories: React.FC<TopCategoritesProps> = ({ data }) => {
           <Typography className="topCategoryText">Top Categories</Typography>
         </Box>
         <Box className="itemsMainBox" ref={topCategoriesRef}>
-          <Box
-            className="itemAndImageBox"
-            onMouseEnter={() => handleMouseEnter("healthBeauty")}
-            onMouseLeave={handleMouseLeave}
-          >
-            <Image src={HealthBeautyIcon} alt="Health & Beauty Icon" />
-            <Typography className="topCategoriesItem">
-              Health & Beauty
-            </Typography>
-          </Box>
-          <Box
-            className="itemAndImageBox"
-            onMouseEnter={() => handleMouseEnter("Apparel")}
-            onMouseLeave={handleMouseLeave}
-          >
-            <Image src={FashionIcon} alt="Health & Beauty Icon" />
-            <Typography className="topCategoriesItem">
-              Apparel & Fashion
-            </Typography>
-          </Box>
-          <Box
-            className="itemAndImageBox"
-            onMouseEnter={() => handleMouseEnter("Chemicals")}
-            onMouseLeave={handleMouseLeave}
-          >
-            <Image src={ChemicalsIcon} alt="Health & Beauty Icon" />
-            <Typography className="topCategoriesItem">Chemicals</Typography>
-          </Box>
-          <Box
-            className="itemAndImageBox"
-            onMouseEnter={() => handleMouseEnter("Machinery")}
-            onMouseLeave={handleMouseLeave}
-          >
-            <Image src={MachineryIcon} alt="Health & Beauty Icon" />
-            <Typography className="topCategoriesItem">Machinery</Typography>
-          </Box>
-          <Box
-            className="itemAndImageBox"
-            onMouseEnter={() => handleMouseEnter("Construction")}
-            onMouseLeave={handleMouseLeave}
-          >
-            <Image src={ConstructionIcon} alt="Health & Beauty Icon" />
-            <Typography className="topCategoriesItem">
-              Construction & Real Estate
-            </Typography>
-          </Box>
-          <Box
-            className="itemAndImageBox"
-            onMouseEnter={() => handleMouseEnter("electronics")}
-            onMouseLeave={handleMouseLeave}
-          >
-            <Image src={ElectronicsIcon} alt="Health & Beauty Icon" />
-            <Typography className="topCategoriesItem">
-              Electronics & Electrical Supplies
-            </Typography>
-          </Box>
-          <Box
-            className="itemAndImageBox"
-            onMouseEnter={() => handleMouseEnter("Hospital")}
-            onMouseLeave={handleMouseLeave}
-          >
-            <Image src={MedicalIcon} alt="Health & Beauty Icon" />
-            <Typography className="topCategoriesItem">
-              Hospital & Medical Supplies
-            </Typography>
-          </Box>
-          <Box
-            className="itemAndImageBox"
-            onMouseEnter={() => handleMouseEnter("Gifts")}
-            onMouseLeave={handleMouseLeave}
-          >
-            <Image src={GiftsIcon} alt="Health & Beauty Icon" />
-            <Typography className="topCategoriesItem">
-              Gifts & Crafts
-            </Typography>
-          </Box>
-          <Box className="itemAndImageBox">
-            <Image src={PackagingIcon} alt="Health & Beauty Icon" />
-            <Typography className="topCategoriesItem">
-              Packaging & Paper
-            </Typography>
-          </Box>
-          <Box className="itemAndImageBox">
-            <Image src={AgricultureIcon} alt="Health & Beauty Icon" />
-            <Typography className="topCategoriesItem">Agriculture</Typography>
-          </Box>
-          <Box className="itemAndImageBox">
-            <Image src={HomeSuppliesIcon} alt="Health & Beauty Icon" />
-            <Typography className="topCategoriesItem">Home Supplies</Typography>
-          </Box>
-          <Box className="itemAndImageBox">
-            <Image src={MineralMetalsIcon} alt="Health & Beauty Icon" />
-            <Typography className="topCategoriesItem">
-              Mineral & Metals
-            </Typography>
-          </Box>
-          <Box className="itemAndImageBox">
-            <Image src={IndustrialSuppliesIcon} alt="Health & Beauty Icon" />
-            <Typography className="topCategoriesItem">
-              Industrial Supplies
-            </Typography>
-          </Box>
-          <Box className="itemAndImageBox">
-            <Image src={PipesTubesFittingsIcon} alt="Health & Beauty Icon" />
-            <Typography className="topCategoriesItem">
-              Pipes, Tubes & Fittings
-            </Typography>
-          </Box>
+          {data &&
+            data.length > 0 &&
+            data.map((categoryItem, categoryIndex) => {
+              return (
+                <Box
+                  key={"categoryItem" + categoryItem.id}
+                  className="itemAndImageBox"
+                  onMouseEnter={() => handleMouseEnter(categoryItem.id)}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <Image src={HealthBeautyIcon} alt={categoryItem.name} />
+                  <Typography className="topCategoriesItem">
+                    {categoryItem.name}
+                  </Typography>
+                </Box>
+              );
+            })}
         </Box>
         <Box>
           <Typography className="viewAllCategoriesLink">

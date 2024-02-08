@@ -1,204 +1,300 @@
 {
   "data": {
-    "categories": {
-      "topCategories": [
-        {
-          "category": "Health & Beauty",
-          "image": "../public/health-beaty.svg",
-          "subcategories": [
-            {
-              "category": "Personal Care Products",
-              "image": "smartphone_image.jpg",
-              "subcategories": [
-                {
-                  "category": "Face Mask",
-                  "products": [
-                    {
-                      "image": "smartphone_image.jpg",
-                      "title": "Awesome Smartphone",
-                      "price": 499.99,
-                      "pieces": 100,
-                      "memberSince": "2022-01-01",
-                      "location": "City A",
-                      "moq": "MOQ"
-                    }
-                  ]
-                },
-                {
-                  "category": "Sanitary Napkins",
-                  "products": [
-                    {
-                      "image": "smartphone_image.jpg",
-                      "title": "Awesome Smartphone",
-                      "price": 499.99,
-                      "pieces": 100,
-                      "memberSince": "2022-01-01",
-                      "location": "City A",
-                      "moq": "MOQ"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-
-      "trendingCategories": [
-        {
-          "title": "Common Medicines & Drugs",
-          "imgSrc": "/get-distributers.svg"
-        },
-        {
-          "title": "Medical, Diagnostic & Hospital Supplies",
-          "imgSrc": "/get-distributers.svg"
-        },
-        {
-          "title": "Personal Care Products",
-          "imgSrc": "/get-distributers.svg"
-        },
-        {
-          "title": "Solar Panels",
-          "imgSrc": "/get-distributers.svg"
-        },
-        {
-          "title": "Human Hair & Accessories",
-          "imgSrc": "/get-distributers.svg"
-        },
-        {
-          "title": "Jackets",
-          "imgSrc": "/get-distributers.svg"
-        },
-        {
-          "title": "Fork Lift Trucks",
-          "imgSrc": "/get-distributers.svg"
-        },
-        {
-          "title": "Heaters",
-          "imgSrc": "/get-distributers.svg"
-        },
-        {
-          "title": "Blankets",
-          "imgSrc": "/get-distributers.svg"
-        },
-        {
-          "title": "Packaging Machine",
-          "imgSrc": "/get-distributers.svg"
-        }
-      ]
-    },
-    "products": {
-      "newArrivals": [
-        {
-          "title": "New Arrival 1",
-          "imgSrc": "/get-distributers.svg",
-          "price": 79.99,
-          "pieces": 50,
-          "units": 5
-        },
-        {
-          "title": "New Arrival 2",
-          "imgSrc": "/get-distributers.svg",
-          "price": 129.99,
-          "pieces": 30,
-          "units": 5
-        },
-        {
-          "title": "New Arrival 2",
-          "imgSrc": "/get-distributers.svg",
-          "price": 129.99,
-          "pieces": 30,
-          "units": 5
-        },
-        {
-          "title": "New Arrival 2",
-          "imgSrc": "/get-distributers.svg",
-          "price": 129.99,
-          "pieces": 30,
-          "units": 5
-        },
-        {
-          "title": "New Arrival 2",
-          "imgSrc": "/get-distributers.svg",
-          "price": 129.99,
-          "pieces": 30,
-          "units": 5
-        }
-      ],
-      "tradeIndiaTrusted": [
-        {
-          "title": "New Arrival 2",
-          "imgSrc": "/get-distributers.svg",
-          "price": 129.99,
-          "pieces": 30,
-          "units": 5
-        },
-        {
-          "title": "New Arrival 2",
-          "imgSrc": "/get-distributers.svg",
-          "price": 129.99,
-          "pieces": 30,
-          "units": 5
-        },
-        {
-          "title": "New Arrival 2",
-          "imgSrc": "/get-distributers.svg",
-          "price": 129.99,
-          "pieces": 30,
-          "units": 5
-        },
-        {
-          "title": "New Arrival 2",
-          "imgSrc": "/get-distributers.svg",
-          "price": 129.99,
-          "pieces": 30,
-          "units": 5
-        },
-        {
-          "title": "New Arrival 2",
-          "imgSrc": "/get-distributers.svg",
-          "price": 129.99,
-          "pieces": 30,
-          "units": 5
-        }
-      ],
-      "featuredProducts": [
-        {
-          "title": "4 Open Park For...",
-          "price": "18000",
-          "unit": "Piece/Pieces",
-          "imgSrc": "/get-distributers.svg",
-          "companyName": "4 POWER SPRING GYM"
-        },
-        {
-          "title": "4 Open Park For...",
-          "price": "18000",
-          "unit": "Piece/Pieces",
-          "imgSrc": "/get-distributers.svg",
-          "companyName": "4 POWER SPRING GYM"
-        },
-        {
-          "title": "4 Open Park For...",
-          "price": "18000",
-          "unit": "Piece/Pieces",
-          "imgSrc": "/get-distributers.svg",
-          "companyName": "4 POWER SPRING GYM"
-        },
-        {
-          "title": "4 Open Park For...",
-          "price": "18000",
-          "unit": "Piece/Pieces",
-          "imgSrc": "/get-distributers.svg",
-          "companyName": "4 POWER SPRING GYM"
-        },
-        {
-          "title": "4 Open Park For...",
-          "price": "18000",
-          "unit": "Piece/Pieces",
-          "imgSrc": "/get-distributers.svg",
-          "companyName": "4 POWER SPRING GYM"
-        }
-      ]
-    }
+    "categories": [
+      {
+        "id": 1,
+        "name": "Health & Beauty",
+        "image": "../public/health-beaty.svg",
+        "iconList": "",
+        "iconDetail": "",
+        "trendingCategory": true,
+        "popularCategory": true,
+        "subcategories": [
+          {
+            "id": 2,
+            "name": "Personal Care Products",
+            "image": "smartphone_image.jpg",
+            "iconList": "",
+            "iconDetail": "",
+            "trendingCategory": true,
+            "popularCategory": true,
+            "subcategories": [
+              {
+                "id": 3,
+                "category": "Face Mask",
+                "products": [
+                  {
+                    "id": 1,
+                    "image": "smartphone_image.jpg",
+                    "title": "Awesome Smartphone",
+                    "price": 499.99,
+                    "pieces": 100,
+                    "units": 5,
+                    "memberSince": "2022-01-01",
+                    "location": "City A",
+                    "moq": "MOQ",
+                    "newArrivals": true,
+                    "tradeTrusted": true,
+                    "featuredProduct": true
+                  }
+                ]
+              },
+              {
+                "id": 4,
+                "category": "Sanitary Napkins",
+                "products": []
+              },
+              {
+                "id": 5,
+                "category": "Safety Masks",
+                "products": []
+              },
+              {
+                "id": 6,
+                "category": "Hand Sanitizers",
+                "products": []
+              },
+              {
+                "id": 7,
+                "category": "Wet Wipes",
+                "products": []
+              }
+            ]
+          },
+          {
+            "id": 8,
+            "name": "Common Medicines & Drugs",
+            "image": "smartphone_image.jpg",
+            "iconList": "",
+            "iconDetail": "",
+            "trendingCategory": true,
+            "popularCategory": true,
+            "subcategories": [
+              {
+                "id": 9,
+                "category": "Cough Syrup",
+                "products": [
+                  {
+                    "id": 1,
+                    "image": "smartphone_image.jpg",
+                    "title": "Awesome Smartphone",
+                    "price": 499.99,
+                    "pieces": 100,
+                    "units": 5,
+                    "memberSince": "2022-01-01",
+                    "location": "City A",
+                    "moq": "MOQ",
+                    "newArrivals": true,
+                    "tradeTrusted": true,
+                    "featuredProduct": true
+                  }
+                ]
+              },
+              {
+                "id": 10,
+                "category": "Multivitamins Tablets",
+                "products": []
+              },
+              {
+                "id": 11,
+                "category": "Anti Allergic Medicine",
+                "products": []
+              },
+              {
+                "id": 12,
+                "category": "Pharmaceutical Injection",
+                "products": []
+              },
+              {
+                "id": 13,
+                "category": "Softgel Capsules",
+                "products": []
+              }
+            ]
+          },
+          {
+            "id": 14,
+            "name": "Soap & Hand Wash",
+            "image": "smartphone_image.jpg",
+            "iconList": "",
+            "iconDetail": "",
+            "trendingCategory": true,
+            "popularCategory": true,
+            "subcategories": [
+              {
+                "id": 15,
+                "category": "Liquid Hand Wash",
+                "products": [
+                  {
+                    "id": 1,
+                    "image": "smartphone_image.jpg",
+                    "title": "Awesome Smartphone",
+                    "price": 499.99,
+                    "pieces": 100,
+                    "units": 5,
+                    "memberSince": "2022-01-01",
+                    "location": "City A",
+                    "moq": "MOQ",
+                    "newArrivals": true,
+                    "tradeTrusted": true,
+                    "featuredProduct": true
+                  }
+                ]
+              },
+              {
+                "id": 16,
+                "category": "Ayurvedic Soap",
+                "products": []
+              },
+              {
+                "id": 17,
+                "category": "Ketoconazole Soap",
+                "products": []
+              },
+              {
+                "id": 18,
+                "category": "Glycerine Soap",
+                "products": []
+              },
+              {
+                "id": 19,
+                "category": "Antiseptic Hand Wash",
+                "products": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 20,
+        "name": "Apparel & Fashion",
+        "image": "../public/health-beaty.svg",
+        "iconList": "",
+        "iconDetail": "",
+        "trendingCategory": true,
+        "popularCategory": true,
+        "subcategories": []
+      },
+      {
+        "id": 21,
+        "name": "Chemicals",
+        "image": "../public/health-beaty.svg",
+        "iconList": "",
+        "iconDetail": "",
+        "trendingCategory": true,
+        "popularCategory": true,
+        "subcategories": []
+      },
+      {
+        "id": 22,
+        "name": "Machinery",
+        "image": "../public/health-beaty.svg",
+        "iconList": "",
+        "iconDetail": "",
+        "trendingCategory": true,
+        "popularCategory": true,
+        "subcategories": []
+      },
+      {
+        "id": 23,
+        "name": "Construction & Real Estate",
+        "image": "../public/health-beaty.svg",
+        "iconList": "",
+        "iconDetail": "",
+        "trendingCategory": true,
+        "popularCategory": true,
+        "subcategories": []
+      },
+      {
+        "id": 24,
+        "name": "Electronics & Electrical Supplies",
+        "image": "../public/health-beaty.svg",
+        "iconList": "",
+        "iconDetail": "",
+        "trendingCategory": true,
+        "popularCategory": true,
+        "subcategories": []
+      },
+      {
+        "id": 25,
+        "name": "Hospital & Medical Supplies",
+        "image": "../public/health-beaty.svg",
+        "iconList": "",
+        "iconDetail": "",
+        "trendingCategory": true,
+        "popularCategory": true,
+        "subcategories": []
+      },
+      {
+        "id": 26,
+        "name": "Gifts & Crafts",
+        "image": "../public/health-beaty.svg",
+        "iconList": "",
+        "iconDetail": "",
+        "trendingCategory": true,
+        "popularCategory": true,
+        "subcategories": []
+      },
+      {
+        "id": 27,
+        "name": "Packaging & Paper",
+        "image": "../public/health-beaty.svg",
+        "iconList": "",
+        "iconDetail": "",
+        "trendingCategory": true,
+        "popularCategory": true,
+        "subcategories": []
+      },
+      {
+        "id": 28,
+        "name": "Agriculture",
+        "image": "../public/health-beaty.svg",
+        "iconList": "",
+        "iconDetail": "",
+        "trendingCategory": true,
+        "popularCategory": true,
+        "subcategories": []
+      },
+      {
+        "id": 29,
+        "name": "Home Supplies",
+        "image": "../public/health-beaty.svg",
+        "iconList": "",
+        "iconDetail": "",
+        "trendingCategory": true,
+        "popularCategory": true,
+        "subcategories": []
+      },
+      {
+        "id": 30,
+        "name": "Mineral & Metals",
+        "image": "../public/health-beaty.svg",
+        "iconList": "",
+        "iconDetail": "",
+        "trendingCategory": true,
+        "popularCategory": true,
+        "subcategories": []
+      },
+      {
+        "id": 31,
+        "name": "Industrial Supplies",
+        "image": "../public/health-beaty.svg",
+        "iconList": "",
+        "iconDetail": "",
+        "trendingCategory": true,
+        "popularCategory": true,
+        "subcategories": []
+      },
+      {
+        "id": 32,
+        "name": "Pipes, Tubes & Fittings",
+        "image": "../public/health-beaty.svg",
+        "iconList": "",
+        "iconDetail": "",
+        "trendingCategory": true,
+        "popularCategory": true,
+        "subcategories": []
+      }
+    ]
   }
 }

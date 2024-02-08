@@ -11,12 +11,34 @@ import PostBuyRequirement from "./components/PostBuyRequirement/PostBuyRequireme
 import DataJson from "./components/data.json";
 import { useEffect, useState } from "react";
 
+
+const getTrendingCategories = (categories: any) => {
+
+  const trendingSubcategories: any = [];
+  categories.forEach((category: any) => {
+    category.subcategories.forEach((subcategory: any) => {
+      if (subcategory.trendingCategory) {
+        trendingSubcategories.push(subcategory);
+      }
+    });
+  });
+
+  return trendingSubcategories
+}
 export default function Home() {
   const [data, setData] = useState<any>(null);
 
+  const [trendingCategories, setTrendingCategories] = useState<any>(null);
   useEffect(() => {
     setData(DataJson);
   }, []);
+
+  useEffect(() => {
+
+    if(data && data.data && data.data.categories){
+      setTrendingCategories(getTrendingCategories(data.data.categories));
+    }
+  }, [data]);
 
   return (
     <main>
@@ -26,8 +48,7 @@ export default function Home() {
             data={
               data &&
               data.data &&
-              data.data.categories &&
-              data.data.categories.topCategories
+              data.data.categories
             }
           />
           <Box className="carouselLookingForAndMoreValue">
@@ -48,12 +69,7 @@ export default function Home() {
         >
           <div style={{ marginBottom: "2rem" }}>
             <VariableWidth
-              data={
-                data &&
-                data.data &&
-                data.data.categories &&
-                data.data.categories.trendingCategories
-              }
+              data={trendingCategories && trendingCategories.length > 0 ? trendingCategories : []}
               title="Trending Categories"
             />
           </div>
