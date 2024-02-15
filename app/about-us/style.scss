@@ -585,11 +585,10 @@
 }
 @media screen and (max-width: 850px) {
   .ourJourneySlideItems {
-    display: inline-flex;
+    display: inline-flex !important;
     flex-direction: column;
     border-bottom: 0;
     border-left: 2px dashed #98a8b6;
-    width: 2px;
     margin: 0 auto;
     height: 600px;
   }
@@ -597,6 +596,66 @@
     display: inline-flex;
     padding: 30px 0px;
     position: relative;
+  }
+  .ourJourneyDot {
+    position: absolute;
+    left: -14px;
+  }
+  .ourJourneyTextBox {
+    bottom: auto;
+    right: 20px;
+    text-align: right;
+    width: 150px;
+  }
+  .ourJourneyText {
+    font-size: 12px !important;
+    line-height: 22px !important;
+  }
+  .ourJourneyLine {
+    border: none;
+    border-bottom: 1px solid #082f4a;
+    transform: rotate(0deg);
+    width: 100px;
+    height: 4px;
+    position: absolute;
+    top: 22px;
+    left: 20px;
+  }
+  .ourJourneyYearBox {
+    width: 52px;
+    height: 52px;
+    top: 0;
+    left: 100px;
+  }
+  .ourJourneyYear {
+    font-size: 12px !important;
+  }
+  .ourJourneyYearDownBox {
+    width: 52px;
+    height: 52px;
+    top: 0;
+    left: 100px;
+  }
+  .ourJourneyBoxUp {
+    top: auto;
+    left: 20px;
+    text-align: left;
+    width: 150px;
+  }
+  .ourJourneyLineDown {
+    border: none;
+    border-bottom: 1px solid #082f4a;
+    transform: rotate(0deg);
+    width: 100px;
+    height: 4px;
+    position: absolute;
+    top: 22px;
+    right: 20px;
+  }
+  .ourJourneyYearDownBox {
+    bottom: 0;
+    left: -160px;
+    top: 0;
   }
   .ourCoreValueItems {
     flex-direction: column;

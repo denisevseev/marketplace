@@ -16,8 +16,8 @@ const OurJourneySlider = () => {
     dots: false,
     infinite: true,
     speed: 1000,
-    autoplay: true,
-    slidesToShow: 1,
+    autoplay: false,
+    slidesToShow: 2,
     slidesToScroll: 1,
     // afterChange: (index) => setCurrentSlide(index),
   };

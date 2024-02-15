@@ -41,14 +41,14 @@ export default function DownloadOurApp() {
                 <Image
                   height={48}
                   width={160}
-                  style={{ objectFit: "cover" }}
+                  style={{ objectFit: "cover", cursor: "pointer" }}
                   src={GooglePlayImage}
                   alt="Google Play Image"
                 />
                 <Image
                   height={48}
                   width={160}
-                  style={{ objectFit: "cover" }}
+                  style={{ objectFit: "cover", cursor: "pointer" }}
                   src={AppStoreImage}
                   alt="App Store Image"
                 />
@@ -61,14 +61,14 @@ export default function DownloadOurApp() {
         <Image
           height={48}
           width={160}
-          style={{ objectFit: "cover" }}
+          style={{ objectFit: "cover", cursor: "pointer" }}
           src={GooglePlayImage}
           alt="Google Play Image"
         />
         <Image
           height={48}
           width={160}
-          style={{ objectFit: "cover" }}
+          style={{ objectFit: "cover", cursor: "pointer" }}
           src={AppStoreImage}
           alt="App Store Image"
         />

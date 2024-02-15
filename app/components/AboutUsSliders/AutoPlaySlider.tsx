@@ -4,7 +4,7 @@ import { Box } from "@mui/material";
 import Slider, { Settings } from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./AutoPlay.scss";
+import "./AutoPlay.module.scss";
 import Image from "next/image";
 
 interface AutoPlaySliderProps {
