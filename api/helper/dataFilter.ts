@@ -34,7 +34,9 @@ export const getFilteredProductsByCategory = (
 ) => {
   // Process the API response to get categories with their products
   // Find the category by name
-  const category = categoriesWithProducts.find((cat: any) => cat.categorySlug === categoryName);
+  const category = categoriesWithProducts.find(
+    (cat: any) => cat.categorySlug === categoryName
+  );
 
   if (!category) {
     // Return an empty array if the category is not found
@@ -43,11 +45,13 @@ export const getFilteredProductsByCategory = (
 
   // Filter products based on the specified fields within the category
   const filteredProducts = category.products.filter((product: any) =>
-    filterFields.every(field => product[field])
+    filterFields.every((field) => product[field])
   );
 
   // Sort filtered products by id
-  const sortedFilteredProducts = filteredProducts.sort((a: any, b: any) => a.id - b.id);
+  const sortedFilteredProducts = filteredProducts.sort(
+    (a: any, b: any) => a.id - b.id
+  );
 
   // Return the specified number of filtered and sorted products
   return sortedFilteredProducts.slice(0, numberOfProducts);
@@ -162,9 +166,11 @@ export const processApiResponse = (apiResponse: any) => {
           )
             imageLink = null;
 
+          const productSlug = getCategorySlug(item.productName);
           newItem = {
             ...newItem,
             productImage: imageLink,
+            productSlug: productSlug,
           };
         }
       }

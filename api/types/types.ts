@@ -12,6 +12,7 @@ export interface MarketRead {
   manufacturerName: string;
   categoryId: number;
   categoryName: string;
+  productSlug?: string;
   categorySlug?: string;
   categoryIcon?: string | null;
   productImage?: string | null;
