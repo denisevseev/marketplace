@@ -43,6 +43,7 @@ const Navigation = () => {
   const [navClass, setNavClass] = React.useState("");
   const [inputValue, setInputValue] = useState<string>("");
   const [isFocused, setIsFocused] = useState(false);
+  const [selectedCountry, setSelectedCountry] = useState("All Regions");
 
   const inputRef = useRef<HTMLInputElement | null>(null);
   const router = useRouter();
@@ -96,10 +97,18 @@ const Navigation = () => {
 
   useEffect(() => {
     if (marketData) {
-      const formated = processApiResponse(marketData);
-      setProducts(getAllProductsInCategories(formated));
+      const formatted = processApiResponse(marketData);
+      let allProducts;
+
+      if (selectedCountry === "All Regions") {
+        allProducts = getAllProductsInCategories(formatted);
+      } else {
+        allProducts = getAllProductsInCategories(formatted, selectedCountry);
+      }
+
+      setProducts(allProducts);
     }
-  }, [marketData]);
+  }, [marketData, selectedCountry]);
 
   // scroll start
   const SCROLL_THRESHOLD_ADD = 70;
@@ -159,7 +168,10 @@ const Navigation = () => {
       </div>
       <div className="block center medium-hide">
         <div className="select-city-container">
-          <SelectCity />
+          <SelectCity
+            selectedOption={selectedCountry}
+            setSelectedOption={setSelectedCountry}
+          />
         </div>
 
         <Autocomplete
