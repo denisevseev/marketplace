@@ -31,11 +31,13 @@ export async function POST(request: NextRequest) {
       }
     );
 
+    console.log(response);
+
     if (!response.ok) {
-      throw new Error(`${response.statusText} (${response.status})`);
+      throw new Error(`${response} (${response})`);
     }
 
-    return new NextResponse(JSON.stringify({ answer: email }), {
+    return new NextResponse(JSON.stringify({ answer: response }), {
       status: 200,
     });
   } catch (error) {
